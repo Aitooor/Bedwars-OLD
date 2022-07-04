@@ -1,6 +1,0 @@
-name: NasgarBedWars-Game
-version: 1.0
-description: BedWars para Nasgar. Diseñado para arenas de juego.
-authors: [NotEugenio_]
-main: dev.eugenio.nasgarbedwars.BedWars
-depend: [SlimeWorldManager]
