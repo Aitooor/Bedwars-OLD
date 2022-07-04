@@ -1,9 +1,12 @@
 package dev.eugenio.nasgarbedwars.api.arena.team;
 
+import dev.eugenio.nasgarbedwars.api.language.Language;
+import dev.eugenio.nasgarbedwars.api.language.Messages;
 import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 
 public enum TeamColor {
     RED,
@@ -91,12 +94,12 @@ public enum TeamColor {
         return (byte) n;
     }
 
-    public static String enName(final String s) {
+    public static String enName(final String s, Player player) {
         String s2 = "";
         final String upperCase = s.toUpperCase();
         switch (upperCase) {
             case "PINK_WOOL": {
-                s2 = "Pink";
+                s2 = Language.getMsg(player, Messages.TEAM_PINK);;
                 break;
             }
             case "RED": {

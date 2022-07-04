@@ -46,7 +46,7 @@ public class AutoCreateTeams extends SubCommand {
         if (session.getSetupType() == SetupType.ASSISTED) {
             if (is13Higher()) {
                 if (AutoCreateTeams.timeOut.containsKey(player) && AutoCreateTeams.timeOut.get(player) >= System.currentTimeMillis() && AutoCreateTeams.teamsFound13.containsKey(player)) {
-                    for (final String s : AutoCreateTeams.teamsFound13.get(player)) Bukkit.dispatchCommand(commandSender, "bw" + " createTeam " + TeamColor.enName(s) + " " + TeamColor.enName(s));
+                    for (final String s : AutoCreateTeams.teamsFound13.get(player)) Bukkit.dispatchCommand(commandSender, "bw" + " createTeam " + TeamColor.enName(s, player) + " " + TeamColor.enName(s, player));
                     if (session.getConfig().getYml().get("waiting.Pos1") == null) {
                         commandSender.sendMessage("");
                         commandSender.sendMessage("§e§lELIMINACIÓN DE LIMBO");
@@ -70,7 +70,7 @@ public class AutoCreateTeams extends SubCommand {
                                 if (block.getType().toString().contains("_WOOL") && !list.contains(block.getType().toString())) {
                                     int n = 0;
                                     for (int l = -2; l < 2; ++l) for (int n2 = -2; n2 < 2; ++n2) for (int n3 = -2; n3 < 2; ++n3) if (new Location(world, i, j, k).getBlock().getType() == block.getType()) ++n;
-                                    if (n >= 5 && !TeamColor.enName(block.getType().toString()).isEmpty() && session.getConfig().getYml().get("Team." + TeamColor.enName(block.getType().toString())) == null) list.add(block.getType().toString());
+                                    if (n >= 5 && !TeamColor.enName(block.getType().toString(), player).isEmpty() && session.getConfig().getYml().get("Team." + TeamColor.enName(block.getType().toString(), player)) == null) list.add(block.getType().toString());
                                 }
                             }
                         }
@@ -92,7 +92,7 @@ public class AutoCreateTeams extends SubCommand {
                     }
                     player.sendMessage("§6§lNUEVOS EQUIPOS ENCONTRADOS:");
                     for (String s : list) {
-                        final String enName = TeamColor.enName(s);
+                        final String enName = TeamColor.enName(s, player);
                         player.sendMessage("§a ♦ " + TeamColor.getChatColor(enName) + enName);
                     }
                     player.spigot().sendMessage(Misc.msgHoverClick("§6 ♦ §7§lClick aquí para encontrar los equipos detectados.", "§fClick para crear los equipos encontrados.", "/" + this.getParent().getName() + " " + this.getSubCommandName(), ClickEvent.Action.RUN_COMMAND));

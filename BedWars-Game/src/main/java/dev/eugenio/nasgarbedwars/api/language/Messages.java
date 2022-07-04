@@ -245,6 +245,7 @@ public class Messages {
     public static String SHOP_UTILITY_NPC_IRON_GOLEM_NAME;
     public static String SHOP_INSUFFICIENT_MONEY;
     public static String SHOP_ALREADY_BOUGHT;
+    public static String TEAM_PINK;
 
     static {
         Messages.NEXT_EVENT_DIAMOND_UPGRADE_II = "next-event-diamondII";
@@ -491,5 +492,6 @@ public class Messages {
         Messages.SHOP_UTILITY_NPC_IRON_GOLEM_NAME = "shop-utility-iron-golem";
         Messages.SHOP_INSUFFICIENT_MONEY = "shop-insuff-money";
         Messages.SHOP_ALREADY_BOUGHT = "shop-already-bought";
+        Messages.TEAM_PINK = "team-pink";
     }
 }

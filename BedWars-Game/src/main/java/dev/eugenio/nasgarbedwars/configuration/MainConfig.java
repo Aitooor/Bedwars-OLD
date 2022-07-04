@@ -20,9 +20,9 @@ public class MainConfig extends ConfigManager {
         yml.options().header("Archivo de configuración general de BedWars. Modo game. Hecho para Nasgar de NotEugenio_");
         yml.addDefault("Redis.Address", "127.0.0.1");
         yml.addDefault("Redis.Port", 6379);
-        yml.addDefault("Redis.Password", "tucontraseña");
-        yml.addDefault("language", "es");
-        yml.addDefault("lobbyServer", "l1");
+        yml.addDefault("Redis.Password", "pass");
+        yml.addDefault("language", "en");
+        yml.addDefault("lobbyServer", "Hub-");
         yml.addDefault("globalChat", false);
         yml.addDefault("formatChat", true);
         yml.addDefault("mark-leave-as-abandon", false);
@@ -53,9 +53,9 @@ public class MainConfig extends ConfigManager {
         yml.addDefault("database.enable", true);
         yml.addDefault("database.host", "127.0.0.1");
         yml.addDefault("database.port", 3306);
-        yml.addDefault("database.database", "bedwars");
-        yml.addDefault("database.user", "nasgar");
-        yml.addDefault("database.pass", "contraseñasupersegurasijaja123");
+        yml.addDefault("database.database", "Bedwars");
+        yml.addDefault("database.user", "root");
+        yml.addDefault("database.pass", "pass");
         yml.addDefault("database.ssl", false);
         yml.addDefault("inventories.disable-crafting-table", true);
         yml.addDefault("inventories.disable-enchanting-table", true);
