@@ -1,5 +1,5 @@
 name: BedWars-Lobby
-version: 1.0.0
-description: BedWars exclusivo para ZoneCraft. Diseñado para lobbies.
+version: 1.0
+description: BedWars para Nasgar. Diseñado para el lobby.
 authors: [NotEugenio_]
 main: dev.eugenio.nasgarbedwars.BedWars
