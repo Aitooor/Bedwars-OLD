@@ -29,6 +29,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.ServicePriority;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
 import java.sql.SQLException;
 import java.util.Arrays;
 
@@ -82,6 +83,7 @@ public class BedWars extends JavaPlugin {
         new Spanish();
 
         mainConfig = new MainConfig(instance, "config");
+        mainConfig.save();
 
         api = new API();
 
